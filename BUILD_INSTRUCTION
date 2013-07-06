@@ -10,7 +10,7 @@ In Unix, you can build with the following commands:
 	make
 The files will be written to ./build/
 
-In Windows, you can install Code::Blocks and run The Uncrackable Encryption Toolchain [WINDOWS].cbp
+In Windows, you can install Code::Blocks and open "The Uncrackable Encryption Toolchain [WINDOWS].cbp"(without quotes)
 Then, configurate the path of the libraries in build option.
 Then press "Compile"
 The executables will be written to .\win32\bin\
