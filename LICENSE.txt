@@ -1,0 +1,23 @@
+This software is written by Wong Cho Ching. The source code as well as the executable files are licensed under BSD 2-clause license, which is available in <root of this software>/LICENSE_BSD_2.txt
+
+This software was written with the use of the following libraries:
+wxWidgets
+Botan
+Boost
+The executables of this software are linked to Boost and Botan statically, and are linked to wxWidgets dynamically.
+
+*Please notice that the following text have no legal effect. This message merely tell you the licenses applied to this software by my own interpretation. The accuracy and the correctness are not guaranteed in the following text.*
+
+The executables are statically linked with Botan and Boost. Therefore, the executables are derived works of Botan and Boost, which have to be licensed under Boost Software License and BSD 2-clause license. Redistribution of the executables are restricted by these licenses.
+Meanwhile, the executables are dynamically linked with wxWidgets. Therefore, the executables are "work that uses the library". These files are not derived works of wxWidgets. As stated in LGPL, which is the license of wxWidgets, these executables are not restricted by LGPL.
+However, the .dll files for Windows executables are licensed under LGPL as these files are built with the source code of wxWidgets, which are derived works of wxWidgets.
+
+The licenses of wxWidgets is available in <root of this software>/LICENSE_LGPL.txt and <root of this software>/LICENSE_WIDGET.txt .
+The license of Boost is available in <root of this software>/LICENSE_BOOST.txt
+The license of Botan is available in <root of this software>/LICENSE_BOTAN.txt
+
+These licenses can also be obtained from their websites. You can obtain a copy of the library from their websites as well:
+wxWidgets: http://www.wxwidgets.org
+Boost: http://www.boost.org/
+Botan: http://botan.randombit.net/
+

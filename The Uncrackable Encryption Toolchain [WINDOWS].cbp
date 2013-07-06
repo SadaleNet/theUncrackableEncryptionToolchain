@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="The Uncrackable Encryption Toolchain" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="dummy">
+				<Option output="win32\bin\dummy" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="win32\bin\" />
+				<Option object_output="win32\obj\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+			</Target>
+			<Target title="keyGen">
+				<Option output="win32\bin\keyGen" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="win32\bin\" />
+				<Option object_output="win32\obj\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+			</Target>
+			<Target title="crypter">
+				<Option output="win32\bin\crypter" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="win32\bin\" />
+				<Option object_output="win32\obj\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-I..\..\Botan-1.10.5\build\include\" />
+				</Compiler>
+				<Linker>
+					<Add library="..\..\Botan-1.10.5\libbotan-1.10.a" />
+				</Linker>
+			</Target>
+			<Target title="injector">
+				<Option output="win32\bin\injector" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="win32\bin\" />
+				<Option object_output="win32\obj\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+			</Target>
+			<Target title="redate">
+				<Option output="win32\bin\redate" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="win32\bin\" />
+				<Option object_output="win32\obj\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+			</Target>
+			<Target title="nuke">
+				<Option output="win32\bin\nuke" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="win32\bin\" />
+				<Option object_output="win32\obj\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+			</Target>
+			<Target title="testCases">
+				<Option output="win32\bin\testCases" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="win32\bin\" />
+				<Option object_output="win32\obj\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+			</Target>
+			<Target title="GUI">
+				<Option output="win32\bin\GUI" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="win32\bin\" />
+				<Option object_output="win32\obj\" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-I..\..\wxWidgets-2.8.12\lib\gcc_dll\mswu" />
+					<Add option="-I..\..\wxWidgets-2.8.12\include" />
+					<Add option="-D__GNUWIN32__" />
+					<Add option="-D__WXMSW__" />
+					<Add option="-DWXUSINGDLL" />
+					<Add option="-DwxUSE_UNICODE" />
+				</Compiler>
+				<Linker>
+					<Add library="..\..\wxWidgets-2.8.12\lib\gcc_dll\libwxmsw28u_core.a" />
+					<Add library="..\..\wxWidgets-2.8.12\lib\gcc_dll\libwxmsw28u_adv.a" />
+					<Add library="..\..\wxWidgets-2.8.12\lib\gcc_dll\libwxbase28u.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="dummy;keyGen;crypter;injector;redate;nuke;testCases;GUI;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-O3" />
+			<Add option="-pedantic" />
+			<Add option="-Wextra" />
+			<Add option="-Wall" />
+			<Add option="-I..\..\boost_1_52_0" />
+			<Add option="-Wno-narrowing" />
+			<Add option="-std=gnu++0x" />
+			<Add directory="..\..\boost_1_53_0\boost" />
+		</Compiler>
+		<Linker>
+			<Add library="..\..\boost_1_52_0\stage\lib\libboost_regex-mgw47-mt-d-1_52.a" />
+			<Add library="..\..\boost_1_52_0\stage\lib\libboost_system-mgw47-mt-1_52.a" />
+			<Add library="..\..\boost_1_52_0\stage\lib\libboost_filesystem-mgw47-mt-1_52.a" />
+			<Add directory="..\..\boost_1_53_0\boost" />
+		</Linker>
+		<Unit filename="GUI.cpp">
+			<Option target="GUI" />
+		</Unit>
+		<Unit filename="GUI.h">
+			<Option target="GUI" />
+		</Unit>
+		<Unit filename="GUIApp.cpp">
+			<Option target="GUI" />
+		</Unit>
+		<Unit filename="GUIObjects.h">
+			<Option target="GUI" />
+		</Unit>
+		<Unit filename="crypter.cpp">
+			<Option compilerVar="CC" />
+			<Option target="crypter" />
+		</Unit>
+		<Unit filename="dummy.cpp">
+			<Option compilerVar="CC" />
+			<Option target="dummy" />
+		</Unit>
+		<Unit filename="injector.cpp">
+			<Option target="injector" />
+		</Unit>
+		<Unit filename="intTest.h">
+			<Option target="testCases" />
+		</Unit>
+		<Unit filename="keyGen.cpp">
+			<Option compilerVar="CC" />
+			<Option target="keyGen" />
+		</Unit>
+		<Unit filename="lib\boost.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="lib\lib.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="lib\mingwSupp.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="lib\native.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="lib\piper\arg\arg.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="lib\piper\arg\file.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="lib\piper\arg\fileName.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="lib\piper\arg\generative.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="lib\piper\arg\input.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="lib\piper\arg\option.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="lib\piper\arg\output.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="lib\piper\arg\redirect.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="lib\piper\core.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="lib\piper\param.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="lib\piper\piper.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="lib\secureRandomDevice.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="lib\uni.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="nuke.cpp">
+			<Option target="nuke" />
+		</Unit>
+		<Unit filename="redate.cpp">
+			<Option target="redate" />
+		</Unit>
+		<Unit filename="testCases.cpp">
+			<Option target="testCases" />
+		</Unit>
+		<Unit filename="wxsmith\GUI.wxs">
+			<Option target="GUI" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<lib_finder disable_auto="1" />
+			<debugger />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="GUIApp.cpp" main="GUI" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxFrame wxs="wxsmith/GUI.wxs" src="GUI.cpp" hdr="GUI.h" name="GUI" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
