@@ -1,4 +1,6 @@
-This software is written by Wong Cho Ching. The source code as well as the executable files are licensed under BSD 2-clause license, which is available in <root of this software>/LICENSE_BSD_2.txt
+This software is written by Wong Cho Ching. The source code are licensed under BSD 2-clause license, which is available in <root of this software>/LICENSE_BSD_2.txt
+
+Meanwhile, the executables are licensed under multiple license. I, as well as the developers of libraries that is used in this software, hold the copyright ownership of the executables.
 
 This software was written with the use of the following libraries:
 wxWidgets
