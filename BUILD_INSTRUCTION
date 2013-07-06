@@ -1,0 +1,16 @@
+You have to install the following libraries in order to build:
+* wxWidget 2.8
+* botan 1.10
+* boost
+
+You also need a compiler which supports C++11
+
+In Unix, you can build with the following commands:
+	cmake .
+	make
+The files will be written to ./build/
+
+In Windows, you can install Code::Blocks and run The Uncrackable Encryption Toolchain [WINDOWS].cbp
+Then, configurate the path of the libraries in build option.
+Then press "Compile"
+The executables will be written to .\win32\bin\
